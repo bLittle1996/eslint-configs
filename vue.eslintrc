@@ -1,0 +1,75 @@
+{
+    "extends": ["airbnb-base", "prettier", "plugin:vue/recommended"],
+    "plugins": ["prettier", "vue"],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 8,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "globals": {
+        "_globals": false
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    },
+    "rules": {
+        "camelcase": "error",
+        "consistent-return": "off",
+        "semi": ["error", "never"],
+        "no-underscore-dangle": "off",
+        "import/extensions": [
+            "error",
+            "always",
+            {
+                "js": "never",
+                "vue": "never"
+            }
+        ],
+        "no-param-reassign": "off",
+        "indent": ["error", 4],
+        "vue/attribute-hyphenation": "off",
+        "vue/no-multi-spaces": "off",
+        "vue/html-closing-bracket-newline": [
+            "error",
+            {
+                "singleline": "never",
+                "multiline": "always"
+            }
+        ],
+        "vue/max-attributes-per-line": [
+            "error",
+            {
+                "singleline": 2,
+                "multiline": 1
+            }
+        ],
+        "vue/html-quotes": "off",
+        "linebreak-style": "off",
+        "prefer-reflect": [
+            "error",
+            {
+                "exceptions": [
+                    "defineProperty",
+                    "getOwnPropertyDescriptor",
+                    "getPrototypeOf",
+                    "setPrototypeOf",
+                    "isExtensible",
+                    "getOwnPropertyNames",
+                    "preventExtensions",
+                    "delete"
+                ]
+            }
+        ]
+    }
+}
