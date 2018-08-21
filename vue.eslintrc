@@ -17,11 +17,7 @@
         "_globals": false
     },
     "settings": {
-        "import/resolver": {
-            "webpack": {
-                "config": "webpack.config.js"
-            }
-        }
+        "import/resolver": "webpack"
     },
     "rules": {
         "camelcase": "error",
@@ -36,10 +32,10 @@
                 "vue": "never"
             }
         ],
+        "import/no-extraneous-dependencies": "off",
         "no-param-reassign": "off",
         "indent": ["error", 4],
-        "vue/attribute-hyphenation": "off",
-        "vue/no-multi-spaces": "off",
+        "vue/html-indent": ["error", 4],
         "vue/html-closing-bracket-newline": [
             "error",
             {
